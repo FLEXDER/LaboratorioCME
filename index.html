@@ -89,7 +89,8 @@
     border-radius: 16px; padding: 24px 20px;
   }
   .chart-label { font-size: 12px; color: var(--muted); margin-bottom: 20px; font-weight: 500; }
-  .chart-bars { display: flex; align-items: flex-end; gap: 6px; height: 180px; }
+  .chart-bars { display: flex; align-items: flex-end; gap: 6px; height: 180px; min-width: 600px; }
+  .chart-scroll { overflow-x: auto; -webkit-overflow-scrolling: touch; padding-bottom: 8px; }
   .chart-col { flex: 1; display: flex; flex-direction: column; align-items: center; gap: 4px; }
   .chart-val { font-size: 9px; color: var(--muted); }
   .chart-bar-wrap { width: 100%; display: flex; flex-direction: column; border-radius: 4px; overflow: hidden; }
@@ -261,7 +262,9 @@
 
     <div class="chart-container">
       <div class="chart-label">Proyección 12 Meses (con crecimiento gradual del 3% mensual)</div>
-      <div class="chart-bars" id="chartBars"></div>
+      <div class="chart-scroll">
+        <div class="chart-bars" id="chartBars"></div>
+      </div>
       <div class="chart-legend" id="chartLegend"></div>
     </div>
   </section>
